@@ -1,3 +1,10 @@
+use clap::Parser;
+#[derive(Parser, Debug)]
+#[clap(author, version, about)]
+struct Args {
+    file_name: String,
+}
 fn main() {
-    println!("Hello, world!");
+    let args = Args::parse();
+    println!("{:?}", args);
 }
